@@ -12,7 +12,6 @@ library(corrplot)
 library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr)    # alternatively, this also loads %>%
 
-setwd("D:/Dropbox/PostDoc_MtSinai/My_Stuff/Teaching/Translational-neuro/Scripts/") #Set your working directory here. 
 setwd("Add/patient/To/Where/You/Want/Files/Saved") #Set your working directory here. 
 
 #Your template csv file should be saved in this folder. 

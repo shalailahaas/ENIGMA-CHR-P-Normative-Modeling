@@ -15,7 +15,9 @@ computation\_additional\_metrics\_extreme\_deviations.m
 
 __Credit:__ Portions of this script were developed and written by Dr. Maria Jalbrzikowski. 
 
+Script to compute 2-proportion z-test to examine whether proportions of extreme deviations significantly differ between 2 groups. 
 
+* 
 
 
 
