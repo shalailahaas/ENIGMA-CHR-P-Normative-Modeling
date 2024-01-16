@@ -7,7 +7,7 @@ computation\_additional\_metrics\_extreme\_deviations.m
 * Compute average deviation scores (lines 44-141)
 * For each brain region, compute percentage of patients at + or - extremes based on defined SD threshold cutoff (lines 143-163)
 * For each brain region, compute percentage of healthy individuals at + or - extremes based on defined SD threshold cutoff (lines 164-185)
-* For each individual participant, compute the percentage of regions with extreme + or - deviations based on predefined SD threshold cutoff (186-232)
+* For each individual participant, compute the percentage of regions with extreme + or - deviations based on predefined SD threshold cutoff (lines 186-232)
 
  
 ##Two-proportion z-test
@@ -17,7 +17,10 @@ __Credit:__ Portions of this script were developed and written by Dr. Maria Jalb
 
 Script to compute 2-proportion z-test to examine whether proportions of extreme deviations significantly differ between 2 groups. 
 
-* 
+* Subcortical volume (lines 21-151)
+* Cortical thickness (lines 152-450)
+* Cortical surface area (lines 451-748)
+* Compute 2-proportion z-test across all regions using FDR correction based on all 150 measures (lines 749-789) 
 
 
 
