@@ -17,6 +17,10 @@ setwd("Add/patient/To/Where/You/Want/Files/Saved") #Set your working directory h
 
 df<-read.csv(file="template_z-scores.csv")
 colnames(df)
+
+################################################################################
+#Subcortical Volume (SV)
+
 sub_reg<-c("Laccumb","Lamyg","Lcaud","Lhippo","Lpal" ,"Lput","Lthal",
            "Raccumb","Ramyg","Rcaud","Rhippo","Rpal","Rput","Rthal")       
 
@@ -145,8 +149,8 @@ res_infranormal_sv
 res_supranormal_sv<-prop.test(x = c(sum(df[df$Group==0,"supranormal_subcortical"] == 'yes'),sum(df[df$Group==1,"supranormal_subcortical"] == 'yes')), n = c(sum(df$Group==0),sum(df$Group==1)))
 res_supranormal_sv
 
-#############################################
-#CT
+################################################################################
+#Cortical Thickness (CT)
 
 colnames(df)
 
@@ -219,8 +223,6 @@ df<-df %>% mutate(R_transversetemporal_thickavg_cat=cut(R_transversetemporal_thi
 df<-df %>% mutate(L_insula_thickavg_cat=cut(L_insula_thickavg, breaks=c(-Inf, -1.96, 1.96,Inf), labels=c("infranormal","normal","supranormal")))
 df<-df %>% mutate(R_insula_thickavg_cat=cut(R_insula_thickavg, breaks=c(-Inf, -1.96, 1.96,Inf), labels=c("infranormal","normal","supranormal")))
 
-
-
 df$supranormal_CT<-ifelse(df$L_bankssts_thickavg_cat == "supranormal" | 
                             df$R_bankssts_thickavg_cat == "supranormal" | 
                             df$L_caudalanteriorcingulate_thickavg_cat == "supranormal" | 
@@ -290,10 +292,6 @@ df$supranormal_CT<-ifelse(df$L_bankssts_thickavg_cat == "supranormal" |
                             df$L_insula_thickavg_cat == "supranormal" | 
                             df$R_insula_thickavg_cat == "supranormal",
                           "yes", "no")
-
-
-
-
 
 df$infranormal_CT<-ifelse(df$L_bankssts_thickavg_cat == "infranormal" | 
                             df$R_bankssts_thickavg_cat == "infranormal" | 
@@ -420,7 +418,6 @@ for ( i in nvar) {
   resmat_ct_infranormal[iter,1:2]<-res[["estimate"]]
   resmat_ct_infranormal[iter,3]<-res[["statistic"]]
   resmat_ct_infranormal[iter,4]<-res[["p.value"]]
-  
 }
 
 resmat_p_infranormal<-p.adjust(resmat_ct_infranormal[,4],"fdr")
@@ -451,8 +448,8 @@ res_infranormal_ct
 res_supranormal_ct<-prop.test(x = c(sum(df[df$Group==0,"supranormal_CT"] == 'yes'),sum(df[df$Group==1,"supranormal_CT"] == 'yes')), n = c(sum(df$Group==0),sum(df$Group==1)))
 res_supranormal_ct
 
-#############################################
-#Surface Area (SA)
+################################################################################
+#Cortical Surface Area (SA)
 
 colnames(df)
 
@@ -525,8 +522,6 @@ df<-df %>% mutate(R_transversetemporal_surfavg_cat=cut(R_transversetemporal_surf
 df<-df %>% mutate(L_insula_surfavg_cat=cut(L_insula_surfavg, breaks=c(-Inf, -1.96, 1.96,Inf), labels=c("infranormal","normal","supranormal")))
 df<-df %>% mutate(R_insula_surfavg_cat=cut(R_insula_surfavg, breaks=c(-Inf, -1.96, 1.96,Inf), labels=c("infranormal","normal","supranormal")))
 
-
-
 df$supranormal_SA<-ifelse(df$L_bankssts_surfavg_cat == "supranormal" | 
                             df$R_bankssts_surfavg_cat == "supranormal" | 
                             df$L_caudalanteriorcingulate_surfavg_cat == "supranormal" | 
@@ -596,10 +591,6 @@ df$supranormal_SA<-ifelse(df$L_bankssts_surfavg_cat == "supranormal" |
                             df$L_insula_surfavg_cat == "supranormal" | 
                             df$R_insula_surfavg_cat == "supranormal",
                           "yes", "no")
-
-
-
-
 
 df$infranormal_SA<-ifelse(df$L_bankssts_surfavg_cat == "infranormal" | 
                             df$R_bankssts_surfavg_cat == "infranormal" | 
@@ -725,7 +716,6 @@ for ( i in nvar) {
   resmat_sa_infranormal[iter,1:2]<-res[["estimate"]]
   resmat_sa_infranormal[iter,3]<-res[["statistic"]]
   resmat_sa_infranormal[iter,4]<-res[["p.value"]]
-  
 }
 
 resmat_p_infranormal<-p.adjust(resmat_sa_infranormal[,4],"fdr")
@@ -745,7 +735,6 @@ for ( i in nvar) {
 }
 
 resmat_p_supranormal<-p.adjust(resmat_sa_supranormal[,4],"fdr")
-
 resmat_sa_supranormal<-cbind(resmat_sa_supranormal,resmat_p_supranormal)
 colnames(resmat_sa_supranormal)<-c("prop-healthy","prop-patient","X-squared","p-value","p-FDR")
 rownames(resmat_sa_supranormal) = colnames(df[,nvar])
@@ -757,9 +746,9 @@ res_infranormal_sa
 res_supranormal_sa<-prop.test(x = c(sum(df[df$Group==0,"supranormal_SA"] == 'yes'),sum(df[df$Group==1,"supranormal_SA"] == 'yes')), n = c(sum(df$Group==0),sum(df$Group==1)))
 res_supranormal_sa
 
-##############################################################################
+################################################################################
 #Test significance of two proportion z-test across all regions (SV, CT, and SA)
-##############################################################################
+
 
 #Two proportion z-test
 nvar=as.integer(c(163:176,179:246,249:316))
