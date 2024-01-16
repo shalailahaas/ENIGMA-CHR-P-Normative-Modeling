@@ -13,7 +13,6 @@ library(magrittr) # needs to be run every time you start R and want to use %>%
 library(dplyr)    # alternatively, this also loads %>%
 
 setwd("Add/patient/To/Where/You/Want/Files/Saved") #Set your working directory here. 
-
 #Your template csv file should be saved in this folder. 
 
 df<-read.csv(file="template_z-scores.csv")
