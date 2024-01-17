@@ -4,7 +4,11 @@ This repository provides the code used to perform the individual-level analyses 
 ## Extreme Deviations
 computation\_additional\_metrics\_extreme\_deviations.m
 
-* Compute average deviation scores (lines 44-141)
+
+
+
+
+* Compute average deviation scores (lines [44](https://github.com/shalailahaas/ENIGMA-CHR-P-Normative-Modeling/blob/9602bd1fface13d56ae61dbd14a8f4131d5d2d75/computation_additional_metrics_extreme_deviations.m#L44)-[141](https://github.com/shalailahaas/ENIGMA-CHR-P-Normative-Modeling/blob/9602bd1fface13d56ae61dbd14a8f4131d5d2d75/computation_additional_metrics_extreme_deviations.m#L141))
 * For each brain region, compute percentage of patients at + or - extremes based on defined SD threshold cutoff (lines 143-163)
 * For each brain region, compute percentage of healthy individuals at + or - extremes based on defined SD threshold cutoff (lines 164-185)
 * For each individual participant, compute the percentage of regions with extreme + or - deviations based on predefined SD threshold cutoff (lines 186-232)
