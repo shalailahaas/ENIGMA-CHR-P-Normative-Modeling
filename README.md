@@ -13,7 +13,7 @@ computation\_additional\_metrics\_extreme\_deviations.m
 ##Two-proportion z-test
 2\_proportion\_z-test.R
 
-__Credit:__ Portions of this script were developed and written by Dr. Maria Jalbrzikowski. 
+__Credit:__ Portions of this script were written by Dr. Maria Jalbrzikowski. 
 
 Script to compute 2-proportion z-test to examine whether proportions of extreme deviations significantly differ between 2 groups. 
 
@@ -27,6 +27,7 @@ Script to compute 2-proportion z-test to examine whether proportions of extreme 
 ##Distribution Plots
 
 Freesurfer\_region\_specific\_distributions.R
+__Credit:__ Portions of this script were written by Dr. Nicole Sanford.
 
 Script to generate distribution plots for cortical thickness, surface area and subcortical volume measures  for two groups based on z-score outputs from CentileBrain. 
 
