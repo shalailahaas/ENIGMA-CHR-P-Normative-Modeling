@@ -32,6 +32,6 @@ __Credit:__ Portions of this script were written by Dr. Nicole Sanford.
 
 Script to generate distribution plots for cortical thickness, surface area and subcortical volume measures  for two groups based on z-score outputs from CentileBrain. 
 
-Accompanying tutorial slides to use the script are available: [here](https://docs.google.com/presentation/d/19dMnLIi21FdUXMm6betug6VuHMxS5YID/edit?usp=sharing&ouid=105633577450428342048&rtpof=true&sd=true)
+Accompanying tutorial slides to use the script are available [here](https://docs.google.com/presentation/d/19dMnLIi21FdUXMm6betug6VuHMxS5YID/edit?usp=sharing&ouid=105633577450428342048&rtpof=true&sd=true).
 
 
