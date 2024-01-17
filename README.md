@@ -27,6 +27,7 @@ Script to compute 2-proportion z-test to examine whether proportions of extreme 
 ## Distribution Plots
 
 Freesurfer\_region\_specific\_distributions.R
+
 __Credit:__ Portions of this script were written by Dr. Nicole Sanford.
 
 Script to generate distribution plots for cortical thickness, surface area and subcortical volume measures  for two groups based on z-score outputs from CentileBrain. 
