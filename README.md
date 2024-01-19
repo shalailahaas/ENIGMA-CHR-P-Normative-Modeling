@@ -11,7 +11,7 @@ In file: `computation_additional_metrics_extreme_deviations.m`
 
  
 ## Two-proportion z-test
-2\_proportion\_z-test.R
+In file: `2_proportion_z-test.R`
 
 __Credit:__ Portions of this script were written by Dr. Maria Jalbrzikowski. 
 
@@ -25,7 +25,7 @@ Script to compute 2-proportion z-test to examine whether proportions of extreme 
 
 ## Distribution Plots
 
-Freesurfer\_region\_specific\_distributions.R
+In file: `Freesurfer_region_specific_distributions.R`
 
 __Credit:__ Portions of this script were written by Dr. Nicole Sanford.
 
